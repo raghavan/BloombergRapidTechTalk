@@ -11,7 +11,7 @@ Apple - 1, Orange - 2, Lemon - 3
 
 
 Enter the folder where the datamodeller.py is present and run the command
-"python datamodeller.py training.csv testing.csv" inside this will render the results in your shell.
+"python datamodeller.py training.csv testing.csv"  this will render the results in your shell.
 
 Reference:
 http://scikit-learn.org/stable/modules/naive_bayes.html#naive-bayes
