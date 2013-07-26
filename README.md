@@ -20,3 +20,4 @@ http://scikit-learn.org/0.13/modules/generated/sklearn.linear_model.LogisticRegr
 
 http://scikit-learn.org/stable/modules/svm.html
 
+I created this project to present a talk at Bloomberg.
