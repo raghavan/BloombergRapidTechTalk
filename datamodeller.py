@@ -1,17 +1,7 @@
 import numpy as np
 import scipy
 import sys
-from sklearn import linear_model,svm,naive_bayes,neighbors
-from sklearn.metrics import confusion_matrix
-from sklearn.metrics import precision_recall_fscore_support,classification_report
-from sklearn import preprocessing as pp
-from sklearn import cross_validation as cv
-from sklearn.decomposition import SparsePCA,PCA
-from sklearn.feature_extraction.text import TfidfTransformer
-from sklearn.neighbors import KNeighborsClassifier
-import csv
-from sklearn import svm, grid_search
-from numpy import genfromtxt    
+from sklearn import linear_model,svm,naive_bayes
 
 def classify(func,xTrain,xTest,yTrain,yTest):        
         clf = func()
@@ -35,11 +25,9 @@ def printResult(yTest,yPred):
         
 class DataModeller:
             
-    def __init__(self, training_file, test_file,result_file):
+    def __init__(self, training_file, test_file):
         self.training_file = training_file
-        self.test_file = test_file
-        DataModeller.result_file_static = result_file
-        
+        self.test_file = test_file        
         
     def runAnalysis(self):
         
@@ -77,9 +65,8 @@ if __name__ == '__main__':
         sys.exit(1)
     training_file = sys.argv[1]
     test_file = sys.argv[2]
-    result_file = 'test'    
 
-    model = DataModeller(training_file, test_file,result_file)
+    model = DataModeller(training_file, test_file)
     model.runAnalysis()
         
         
